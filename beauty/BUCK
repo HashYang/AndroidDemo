@@ -1,0 +1,40 @@
+prebuilt_jar(
+    name = 'gson',
+    binary_jar = './libs/gson-1.7.1.jar',
+    visibility = [ 'PUBLIC' ],
+)
+
+android_binary(
+  name = 'debug',
+  package_type = 'DEBUG',
+  manifest = './src/main/AndroidManifest.xml',
+  keystore = ':debug_keystore',
+  target = 'Google Inc.:Google APIs:19',
+  deps = [
+    ':res',
+    ':src',
+  ],
+)
+
+android_resource(
+  name = 'res',
+  res = './src/main/res',
+  package = 'demo.chen.com.beauty',
+  visibility = [ 'PUBLIC' ],
+)
+
+android_library(
+  name = 'src',
+  srcs = glob(['./src/main/java/**/*.java']),
+  deps = [
+    ':res',
+    ':gson',
+  ],
+)
+
+keystore(
+  name = 'debug_keystore',
+  store = './keystore/debug.keystore',
+  properties = './keystore/debug.keystore.properties',
+)
+

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Beauty</string>
+    <string name="ntes">图片</string>
+    <string name="comic">漫画</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="about">关于</string>
+</resources>

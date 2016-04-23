@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LucyMoney</string>
+    <string name="action_settings">Settings</string>
+    <string name="accessibility_description">微信红包</string>
+</resources>
